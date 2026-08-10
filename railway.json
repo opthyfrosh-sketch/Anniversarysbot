@@ -1,0 +1,16 @@
+{
+  "build": {
+    "builder": "NIXPACKS",
+    "buildCommand": "pip install -r requirements.txt"
+  },
+  "deploy": {
+    "startCommand": "python main.py",
+    "restartPolicyType": "ON_FAILURE",
+    "restartPolicyMaxRetries": 5
+  },
+  "env": {
+    "TELEGRAM_TOKEN": {
+      "required": true
+    }
+  }
+}
